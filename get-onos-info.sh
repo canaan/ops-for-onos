@@ -23,6 +23,13 @@ master() {
 	done
 }
 
+trace() {
+	for i in $OC1 $OC5 $OC6
+	do
+		client -h $i -u karaf "log TRACE"
+	done
+}
+
 case "$1" in
 roles)
 	set -x
@@ -35,6 +42,10 @@ devices)
 master)
 	set -x
 	master
+	;;
+trace)
+	set -x
+	trace
 	;;
 *)
 	echo "usage:30 {master|roles|devices}"
