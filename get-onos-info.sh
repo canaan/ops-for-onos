@@ -30,6 +30,13 @@ trace() {
 	done
 }
 
+info() {
+    for i in $OC1 $OC5 $OC6
+    do
+        client -h $i -u karaf "log INFO"
+    done
+}
+
 case "$1" in
 roles)
 	set -x
@@ -46,6 +53,10 @@ master)
 trace)
 	set -x
 	trace
+	;;
+info)
+	set -x
+	info
 	;;
 *)
 	echo "usage:30 {master|roles|devices}"
