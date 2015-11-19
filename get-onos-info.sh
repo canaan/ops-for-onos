@@ -59,5 +59,5 @@ info)
 	info
 	;;
 *)
-	echo "usage:30 {master|roles|devices}"
+	echo "usage:30 {master|roles|devices|trace|info}"
 esac
