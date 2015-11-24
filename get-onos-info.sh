@@ -16,10 +16,10 @@ devices() {
         done
 }
 
-master() {
+masters() {
 	for i in $OC1 $OC5 $OC6
 	do
-        	client -h $i -u karaf "master" > $INFOLOG_DIR/"$i"_master_$(date +%F_%T)
+        	client -h $i -u karaf "masters" > $INFOLOG_DIR/"$i"_masters_$(date +%F_%T)
 	done
 }
 
@@ -46,9 +46,9 @@ devices)
 	set -x
 	devices
 	;;
-master)
+masters)
 	set -x
-	master
+	masters
 	;;
 trace)
 	set -x
@@ -59,5 +59,5 @@ info)
 	info
 	;;
 *)
-	echo "usage:30 {master|roles|devices|trace|info}"
+	echo "usage:30 {masters|roles|devices|trace|info}"
 esac
