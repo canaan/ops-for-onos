@@ -26,14 +26,14 @@ master() {
 trace() {
 	for i in $OC1 $OC5 $OC6
 	do
-		client -h $i -u karaf "log TRACE"
+		client -h $i -u karaf "log:set TRACE"
 	done
 }
 
 info() {
     for i in $OC1 $OC5 $OC6
     do
-        client -h $i -u karaf "log INFO"
+        client -h $i -u karaf "log:set INFO"
     done
 }
 
