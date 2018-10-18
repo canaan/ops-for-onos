@@ -1,0 +1,24 @@
+# JGN
+interface-add -m 52:54:00:00:02:03 -i 10.1.254.1/29 of:0000000000000002/3 note-03
+bgp-speaker-add JGN of:0000000000000002/4
+bgp-peer-add JGN 10.1.254.2
+
+# NARlab
+interface-add -m 52:54:00:00:05:03 -i 10.140.110.58/28 of:0000000000000005/3 nagoya-03
+bgp-speaker-add NARlab of:0000000000000005/4
+bgp-peer-add NARlab 10.140.110.57
+
+# intFUKU (for test)
+interface-add -m 52:54:00:00:08:03 -i 10.10.254.1/29 of:0000000000000008/3 fukuoka-03
+bgp-speaker-add intFUKU of:0000000000000008/4
+bgp-peer-add intFUKU 10.10.254.2
+
+# APAN
+interface-add -m 52:54:00:00:02:05 -i 203.181.248.93/30 of:0000000000000002/5 note-05
+bgp-speaker-add APAN of:0000000000000002/6
+bgp-peer-add APAN 203.181.248.94
+
+# NECTEC
+interface-add -m 52:54:00:00:18:04 -i 10.1.254.25/29 of:0000000000000018/3 hiroshima-03
+bgp-speaker-add NECTEC of:0000000000000018/4
+bgp-peer-add NECTEC 10.1.254.26
